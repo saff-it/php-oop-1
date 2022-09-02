@@ -1,3 +1,26 @@
+
+<?php 
+    class Movie{
+        private $name;
+        private $genre;
+        private $year;
+
+        function __construct($name, $genre, $year){
+
+        }
+
+        
+    }
+
+
+
+
+    $movieOne = new Movie();
+    $movieTwo = new Movie();
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +30,8 @@
     <title>php oop</title>
 </head>
 <body>
+
+
     
 </body>
 </html>
