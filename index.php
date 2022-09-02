@@ -23,11 +23,21 @@
             return $this->year;
         }
 
+        public function getTitle(){
+            return $this->title;
+        }
+
+        public function getGenre(){
+            return $this->genre;
+        }
+
     }
 
-
-    $movieOne = new Movie('Titanic', 'horror', '2002');
-    var_dump($movieOne);
+    $movieOne = new Movie('Titanic', 'Horror', '2002');
+    $movieTwo = new Movie('Jumanji', 'Commedy', '1999');
+    $movieThree = new Movie('Avatar', 'Adventure', '2011');
+    $movieFour = new Movie('Io sono leggenda', 'Horror', '2007');
+    // var_dump($movieOne);
 
 ?>
 
@@ -41,6 +51,23 @@
 </head>
 <body>
 
+    <section>
+        <h3>Titoli Film:</h3>
+        <ul>
+            <li>
+                <?php echo $movieOne->getTitle() . ' - Genere: ' . $movieOne->getGenre() . ' - Anno: ' . $movieOne->getYear() ?>
+            </li>
+            <li>
+                <?php echo $movieTwo->getTitle() . ' - Genere: ' . $movieTwo->getGenre() . ' - Anno: ' . $movieTwo->getYear() ?>
+            </li>
+            <li>
+                <?php echo $movieThree->getTitle() . ' - Genere: ' . $movieThree->getGenre() . ' - Anno: ' . $movieThree->getYear() ?>
+            </li>
+            <li>
+                <?php echo $movieFour->getTitle() . ' - Genere: ' . $movieFour->getGenre() . ' - Anno: ' . $movieFour->getYear() ?>
+            </li>
+        </ul>
+    </section>
 
     
 </body>
