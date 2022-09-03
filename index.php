@@ -38,6 +38,13 @@
     $movieThree = new Movie('Avatar', 'Adventure', '2011');
     $movieFour = new Movie('Io sono leggenda', 'Horror', '2007');
     // var_dump($movieOne);
+    $movies = [];
+    $movies[] = $movieOne;
+    $movies[] = $movieTwo;
+    $movies[] = $movieThree;
+    $movies[] = $movieFour;
+    var_dump($movies);
+
 
 ?>
 
@@ -54,18 +61,11 @@
     <section>
         <h3>Titoli Film:</h3>
         <ul>
-            <li>
-                <?php echo $movieOne->getTitle() . ' - Genere: ' . $movieOne->getGenre() . ' - Anno: ' . $movieOne->getYear() ?>
-            </li>
-            <li>
-                <?php echo $movieTwo->getTitle() . ' - Genere: ' . $movieTwo->getGenre() . ' - Anno: ' . $movieTwo->getYear() ?>
-            </li>
-            <li>
-                <?php echo $movieThree->getTitle() . ' - Genere: ' . $movieThree->getGenre() . ' - Anno: ' . $movieThree->getYear() ?>
-            </li>
-            <li>
-                <?php echo $movieFour->getTitle() . ' - Genere: ' . $movieFour->getGenre() . ' - Anno: ' . $movieFour->getYear() ?>
-            </li>
+            <?php foreach ($movies as $movie) { ?>
+                <li>
+                    <?php echo $movie->getTitle() . ' - Genere: ' . $movie->getGenre() . ' - Anno: ' . $movie->getYear() ?>
+                </li>
+            <?php } ?>
         </ul>
     </section>
 
